@@ -5,14 +5,17 @@ var mainObj = [];
 //for adding record
 function addRecord(idd,namee,addresss,emaill,classs,markks)
 {
-     //var obj = [{id:idd , name:namee,  address:addresss, email:emaill, clas:classs, marks : markks }]; 
-     //var mainObj  = _.concat(obj,);
+     
+     var obj =[{id:idd , name:namee,  address:addresss, email:emaill, clas:classs, marks : markks }];
+     //var mainObj = _.concat(obj,[]);
+     //var mainObj = _.assign({}, obj);
+     //console.log(mainObj);
      mainObj.push( {id:idd, name:namee,  address:addresss, email:emaill, clas:classs, marks : markks } );
 }
 //for updating record
 function updRecord(namee){
  // get index of object with given name
-  var reqIndex = _.findIndex(mainObj, function(o) { return o.name == namee; }); 
+  var reqIndex = _.findIndex(mainObj, function(o) { return o.name === namee; }); 
   
   if(mainObj[reqIndex].name=== namee)
    {
